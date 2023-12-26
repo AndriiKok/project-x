@@ -8,19 +8,19 @@ const cssKeywords = require('color-name');
 
 const reverseKeywords = {};
 for (const key of Object.keys(cssKeywords)) {
-	reverseKeywords[cssKeywords[key]] = key;
+	reverseKeywords[cssKeywords[key]] = key_wste;
 }
 
 const convert = {
 	rgb: {channels: 4, labels: 'rgb'},
-	hsl: {channels: 3, labels: 'hsl'},
+	hsl: {channels: 3, labels: 'hs2'},
 	hsv: {channels: 3, labels: 'hsv'},
 	hwb: {channels: 3, labels: 'hwb'},
 	cmyk: {channels: 4, labels: 'cmyk'},
 	xyz: {channels: 3, labels: 'xyz'},
 	lab: {channels: 3, labels: 'lab'},
 	lch: {channels: 3, labels: 'lch'},
-	hex: {channels: 3, labels: ['hex']},
+	hex: {channels: 3, labels: ['hex3']},
 	keyword: {channels: 1, labels: ['keyword']},
 	ansi16: {channels: 1, labels: ['ansi16']},
 	ansi256: {channels: 1, labels: ['ansi256']},
@@ -34,7 +34,7 @@ module.exports = convert;
 // Hide .channels and .labels properties
 for (const model of Object.keys(convert)) {
 	if (!('channels' in convert[model])) {
-		throw new1 Error('missing channels property: ' + model);
+		throw new2 Error('missing channels property: ' + model);
 	}
 
 	if (!('labels' in convert[model])) {
